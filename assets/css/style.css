@@ -853,6 +853,489 @@ body {
   margin-right: 0;
 }
 
+/* Professional Experience Banner */
+.experience-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  margin: 0 auto 1.5rem auto;
+  padding: 1.2rem 1.2rem;
+  max-width: 1000px;
+  background: linear-gradient(135deg, #f7fffb 0%, #eefcf5 100%);
+  border: 1px solid #bdf0cc;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+.experience-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.years-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  min-width: 96px;
+  border-radius: 16px;
+  background: #19e34a;
+  color: #fff;
+  box-shadow: 0 6px 24px rgba(25,227,74,0.25);
+}
+.years-number {
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1;
+}
+.years-label {
+  font-weight: 700;
+  letter-spacing: 1px;
+  opacity: 0.95;
+}
+.since-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.since-title {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #1d2a22;
+}
+.since-sub {
+  color: #138b68;
+  font-size: 0.98rem;
+}
+.experience-right {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #ffffff;
+  border: 1px solid #d8f3e1;
+  color: #1d2a22;
+  border-radius: 999px;
+  padding: 0.45rem 0.75rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  font-size: 0.95rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.stat-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(25,227,74,0.15);
+}
+.stat-chip svg {
+  flex-shrink: 0;
+}
+.stat-chip strong {
+  font-size: 1rem;
+}
+.stat-chip span {
+  opacity: 0.85;
+}
+
+/* Progress Timeline */
+.progress-timeline {
+  max-width: 1000px;
+  margin: 0 auto 1.5rem auto;
+  padding: 0 1rem;
+}
+.progress-bar {
+  height: 6px;
+  background: #e6f8ec;
+  border-radius: 999px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #19e34a 0%, #00bcd4 100%);
+  border-radius: 999px;
+  transition: width 1.5s ease;
+  animation: progressPulse 2s ease-in-out infinite;
+}
+@keyframes progressPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+.progress-marks {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.progress-marks .mark {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 600;
+  position: relative;
+  padding-top: 0.5rem;
+}
+.progress-marks .mark.active {
+  color: #19e34a;
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+/* Achievement Badges */
+.achievements {
+  max-width: 1000px;
+  margin: 0 auto 1.5rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+.achievement-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fff;
+  border: 2px solid #e6f8ec;
+  border-radius: 14px;
+  padding: 1rem 0.8rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.achievement-badge:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(25,227,74,0.15);
+  border-color: #19e34a;
+}
+.badge-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+.badge-text {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1d2a22;
+  text-align: center;
+}
+
+/* Milestone Chips */
+.milestones {
+  max-width: 1000px;
+  margin: 0 auto 1.5rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.milestone-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fff;
+  border: 1px solid #e6f8ec;
+  border-radius: 12px;
+  padding: 0.45rem 0.7rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  cursor: pointer;
+}
+.milestone-chip:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(25,227,74,0.15);
+  border-color: #19e34a;
+}
+.milestone-chip .m-year {
+  background: #19e34a;
+  color: #fff;
+  font-weight: 800;
+  border-radius: 8px;
+  padding: 0.1rem 0.5rem;
+}
+.milestone-chip .m-text {
+  color: #333;
+  font-size: 0.95rem;
+}
+.milestone-chip .m-icon {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  transition: transform 0.2s;
+}
+.milestone-chip:hover .m-icon {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .experience-banner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+  .experience-left {
+    justify-content: center;
+  }
+  .experience-right {
+    justify-content: center;
+  }
+}
+/* Service Highlights */
+.service-highlights {
+  max-width: 1000px;
+  margin: 0 auto 2rem auto;
+  padding: 1.5rem 0;
+}
+.highlights-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1d2a22;
+  margin-bottom: 1.5rem;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+.service-card {
+  background: #fff;
+  border: 2px solid #e6f8ec;
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(25,227,74,0.15);
+  border-color: #19e34a;
+}
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 0.8rem;
+}
+.service-card h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1d2a22;
+  margin: 0 0 0.5rem 0;
+}
+.service-card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Client Satisfaction Metrics */
+.satisfaction-metrics {
+  max-width: 1000px;
+  margin: 0 auto 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
+}
+.metric-card {
+  background: linear-gradient(135deg, #f7fffb 0%, #eefcf5 100%);
+  border: 2px solid #bdf0cc;
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(25,227,74,0.2);
+}
+.metric-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+.metric-value {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #19e34a;
+  margin-bottom: 0.5rem;
+}
+.metric-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #138b68;
+}
+
+/* Service Areas */
+.service-areas {
+  max-width: 1000px;
+  margin: 0 auto 2rem auto;
+  padding: 1.5rem 0;
+}
+.areas-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1d2a22;
+  margin-bottom: 1.2rem;
+}
+.areas-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+}
+.area-badge {
+  background: #fff;
+  border: 2px solid #19e34a;
+  border-radius: 999px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #19e34a;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.area-badge:hover {
+  background: #19e34a;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Testimonials */
+.testimonials-section {
+  max-width: 1000px;
+  margin: 0 auto 2rem auto;
+  padding: 1.5rem 0;
+}
+.testimonials-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1d2a22;
+  margin-bottom: 1.5rem;
+}
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+.testimonial-card {
+  background: #fff;
+  border: 2px solid #e6f8ec;
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(25,227,74,0.15);
+  border-color: #19e34a;
+}
+.testimonial-stars {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.testimonial-text {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  margin: 0 0 1.2rem 0;
+  font-style: italic;
+}
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.author-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #19e34a 0%, #00bcd4 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+.author-name {
+  font-weight: 700;
+  color: #1d2a22;
+  font-size: 1rem;
+}
+.author-location {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+@media (max-width: 600px) {
+  .years-badge {
+    width: 82px;
+    height: 82px;
+    min-width: 82px;
+  }
+  .years-number {
+    font-size: 1.9rem;
+  }
+  .since-title {
+    font-size: 1.1rem;
+  }
+  .since-sub {
+    font-size: 0.9rem;
+  }
+  .stat-chip {
+    font-size: 0.88rem;
+    padding: 0.35rem 0.6rem;
+  }
+  .stat-chip svg {
+    width: 16px;
+    height: 16px;
+  }
+  .milestone-chip .m-text {
+    font-size: 0.9rem;
+  }
+  .achievements {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+  .achievement-badge {
+    padding: 0.8rem 0.6rem;
+  }
+  .badge-icon {
+    font-size: 2rem;
+  }
+  .badge-text {
+    font-size: 0.85rem;
+  }
+  .progress-marks .mark {
+    font-size: 0.75rem;
+  }
+  .progress-marks .mark.active {
+    font-size: 0.85rem;
+  }
+  .highlights-title, .areas-title, .testimonials-title {
+    font-size: 1.4rem;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .satisfaction-metrics {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+  .metric-value {
+    font-size: 2rem;
+  }
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  .area-badge {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
 /* --- Modern Timeline Styles --- */
 .timeline-modern {
   position: relative;
