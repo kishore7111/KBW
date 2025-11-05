@@ -1336,6 +1336,281 @@ body {
   }
 }
 
+/* Why Choose Us Section */
+.why-choose-section {
+  background: linear-gradient(135deg, #f7fffb 0%, #eefcf5 100%);
+  padding: 4rem 2rem;
+  margin: 2rem 0;
+}
+.why-choose-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.why-choose-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #1d2a22;
+  margin-bottom: 3rem;
+}
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.why-card {
+  background: #fff;
+  border: 2px solid #e6f8ec;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.why-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(25,227,74,0.2);
+  border-color: #19e34a;
+}
+.why-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+.why-card h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #1d2a22;
+  margin: 0 0 1rem 0;
+}
+.why-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Seasonal Tips Section */
+.seasonal-tips-section {
+  padding: 4rem 2rem;
+  background: #fff;
+}
+.seasonal-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.seasonal-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #1d2a22;
+  margin-bottom: 3rem;
+}
+.seasonal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.season-card {
+  background: linear-gradient(135deg, #fff 0%, #f7fffb 100%);
+  border: 2px solid #e6f8ec;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.season-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(25,227,74,0.15);
+}
+.season-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+.season-card h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #1d2a22;
+  margin: 0 0 1rem 0;
+}
+.season-card p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+}
+.season-badge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+}
+.season-card:nth-child(1) .season-badge {
+  background: #19e34a; /* Recommended - Green */
+}
+.season-card:nth-child(2) .season-badge {
+  background: #ffa500; /* Possible - Orange */
+}
+.season-card:nth-child(3) .season-badge {
+  background: #00bcd4; /* Good - Cyan */
+}
+.season-card:nth-child(4) .season-badge {
+  background: #888; /* Moderate - Gray */
+}
+
+/* Emergency Widget */
+.emergency-widget {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  z-index: 1000;
+  max-width: 320px;
+  background: linear-gradient(135deg, #ff4444 0%, #ff6b6b 100%);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 8px 32px rgba(255,68,68,0.4);
+  animation: pulse-emergency 2s ease-in-out infinite;
+  display: none;
+}
+.emergency-widget.show {
+  display: block;
+}
+@keyframes pulse-emergency {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+.emergency-content {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #fff;
+}
+.emergency-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+.emergency-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.emergency-text strong {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 0.2rem;
+}
+.emergency-text span {
+  font-size: 0.85rem;
+  opacity: 0.95;
+}
+.emergency-btn {
+  background: #fff;
+  color: #ff4444;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s;
+  white-space: nowrap;
+}
+.emergency-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Quick Action Buttons (Floating) */
+.quick-actions {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.quick-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+}
+.quick-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.3);
+}
+.call-quick {
+  background: linear-gradient(135deg, #19e34a 0%, #00bcd4 100%);
+  color: #fff;
+}
+.whatsapp-quick {
+  background: #25D366;
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .why-choose-title, .seasonal-title {
+    font-size: 2rem;
+  }
+  .why-choose-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  .seasonal-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .emergency-widget {
+    bottom: 90px;
+    right: 10px;
+    max-width: 280px;
+    padding: 0.8rem;
+  }
+  .quick-actions {
+    bottom: 15px;
+    right: 15px;
+  }
+  .quick-btn {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .why-choose-section, .seasonal-tips-section {
+    padding: 3rem 1rem;
+  }
+  .why-choose-title, .seasonal-title {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+  }
+  .seasonal-grid {
+    grid-template-columns: 1fr;
+  }
+  .why-card, .season-card {
+    padding: 1.5rem;
+  }
+  .emergency-widget {
+    bottom: 80px;
+    right: 10px;
+    max-width: calc(100vw - 20px);
+  }
+  .emergency-content {
+    flex-wrap: wrap;
+  }
+  .emergency-btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+}
+
 /* --- Modern Timeline Styles --- */
 .timeline-modern {
   position: relative;
